@@ -24,15 +24,15 @@ import android.content.res.TypedArray;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
-import org.holoeverywhere.R;
 import android.support.v7.internal.view.SupportMenuInflater;
 import android.support.v7.view.ActionMode;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import org.holoeverywhere.R;
 
 abstract class ActionBarActivityDelegate {
 
@@ -163,8 +163,8 @@ abstract class ActionBarActivityDelegate {
             }
             return uiOptions;
         } catch (PackageManager.NameNotFoundException e) {
-            Log.e(TAG, "getUiOptionsFromMetadata: Activity '" + mActivity.getClass()
-                    .getSimpleName() + "' not in manifest");
+            //Log.e(TAG, "getUiOptionsFromMetadata: Activity '" + mActivity.getClass()
+            //        .getSimpleName() + "' not in manifest");
             return null;
         }
     }

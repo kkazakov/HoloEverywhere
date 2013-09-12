@@ -113,6 +113,17 @@ public class TimePicker extends FrameLayout {
         this(context, null);
     }
 
+    public void setMinutes30()
+    {
+        //minute
+        //mMinuteSpinner = (NumberPicker) findViewById(R.id.minute);
+        mMinuteSpinner.setMinValue(0);
+        mMinuteSpinner.setMaxValue(1);
+        mMinuteSpinner.setDisplayedValues(new String[]{"0", "30"});
+        mMinuteSpinner.setOnLongPressUpdateInterval(100);
+        mMinuteSpinner.setFormatter(NumberPicker.TWO_DIGIT_FORMATTER);
+    }
+
     public TimePicker(Context context, AttributeSet attrs) {
         this(context, attrs, R.attr.timePickerStyle);
     }
